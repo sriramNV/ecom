@@ -15,10 +15,10 @@
         @apply flex justify-between items-center;
     }
 
-    .text-30-extrabold {
+    .text-30-extrabold { 
         @apply text-[30px] font-extrabold text-white;
     }
-
+ 
     .text-30-bold {
         @apply text-[30px] font-bold text-black;
     }

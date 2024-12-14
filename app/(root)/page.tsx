@@ -17,26 +17,26 @@ export default async function Home({searchParams}: {searchParams: Promise<{query
 
   return (
     <>
-    <section className="pink_container">
-      <h1 className="text-center heading">Pitch your startup,<br/> Connect with Enterprenurs</h1>
-      <p className="sub-heading !max-w-3xl">
-        Submit Ideas and get noticed in virtual competitions  
-       </p>
-       <SeachForm query={query}/>
-    </section>
+      <section className="pink_container">
+        <h1 className="text-center heading">Pitch your startup,<br/> Connect with Enterprenurs</h1>
+        <p className="sub-heading !max-w-3xl">
+          Submit Ideas and get noticed in virtual competitions  
+        </p>
+        <SeachForm query={query}/>
+      </section>
 
-    <section className="section_container">
-      <p className="text-30-semibold">
-        {query ? `Search results for "${query}"` : 'Latest Startups'}
-      </p>
-  
-      <ul className="mt-7 card_grid">
-        {posts?.length > 0 ?(posts.map((post: StartupCardType, index: number) =>(<StartupCard key={post?._id} post={post} />))): 
-          (<p className="no-result">No Startups Found</p>)}
+      <section className="section_container">
+        <p className="text-30-semibold">
+          {query ? `Search results for "${query}"` : 'Latest Startups'}
+        </p>
+    
+        <ul className="mt-7 card_grid">
+          {posts?.length > 0 ?(posts.map((post: StartupCardType, index: number) =>(<StartupCard key={post?._id} post={post} />))): 
+            (<p className="no-result">No Startups Found</p>)}
 
-      </ul>
-      
-    </section>
+        </ul>
+        
+      </section> 
 
     </>
   );
